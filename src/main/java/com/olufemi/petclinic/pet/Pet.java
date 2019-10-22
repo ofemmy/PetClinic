@@ -1,30 +1,31 @@
 package com.olufemi.petclinic.pet;
 
-import com.olufemi.petclinic.owner.Owner;
 import com.olufemi.petclinic.utils.BaseEntity;
 import java.time.LocalDate;
+import javax.persistence.Entity;
 
+@Entity
 public class Pet extends BaseEntity {
 
-  private PetType petType;
-  private Owner owner;
+  private String petType;
+  //private Owner owner;
   private LocalDate birthDate;
 
-  public PetType getPetType() {
+  public String getPetType() {
     return petType;
   }
 
-  public void setPetType(PetType petType) {
+  public void setPetType(String petType) {
     this.petType = petType;
   }
 
-  public Owner getOwner() {
-    return owner;
-  }
+  //public Owner getOwner() {
+  // return owner;
+  // }
 
-  public void setOwner(Owner owner) {
-    this.owner = owner;
-  }
+  //public void setOwner(Owner owner) {
+  //this.owner = owner;
+  //}
 
   public LocalDate getBirthDate() {
     return birthDate;
@@ -38,7 +39,6 @@ public class Pet extends BaseEntity {
   public String toString() {
     return "Pet{" +
         "petType=" + petType +
-        ", owner=" + owner +
         ", birthDate=" + birthDate +
         '}';
   }

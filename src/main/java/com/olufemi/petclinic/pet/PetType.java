@@ -1,6 +1,10 @@
 package com.olufemi.petclinic.pet;
 
-public class PetType {
+import com.olufemi.petclinic.utils.BaseEntity;
+import javax.persistence.Entity;
+
+@Entity
+public class PetType extends BaseEntity {
 
   private String name;
 
